@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="QuickTimerPlugin.Views.FloatingIconWindow"
+        Title="QuickTimer" Width="56" Height="56"
+        SystemDecorations="None" ShowInTaskbar="False" ShowActivated="False"
+        Topmost="True" CanResize="False"
+        TransparencyLevelHint="Transparent" Background="Transparent">
+    <Border x:Name="IconBorder" Width="48" Height="48" CornerRadius="14"
+            Background="#E6222233" BorderBrush="#80FFFFFF" BorderThickness="1"
+            Cursor="Hand"
+            PointerPressed="IconBorder_OnPointerPressed"
+            PointerMoved="IconBorder_OnPointerMoved"
+            PointerReleased="IconBorder_OnPointerReleased">
+        <Panel>
+            <!-- 进度环底轨 -->
+            <Ellipse Width="36" Height="36" Stroke="#33FFFFFF" StrokeThickness="3" Fill="Transparent"/>
+            <!-- 进度环 -->
+            <Ellipse x:Name="ProgressEllipse" Width="36" Height="36"
+                     Stroke="#FF4CC2FF" StrokeThickness="3" Fill="Transparent">
+                <Ellipse.RenderTransform>
+                  <RotateTransform Angle="-90"/>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+            <!-- 表盘指针 -->
+            <Path Data="M 12,6.5 L 12,12 L 15.5,14"
+                  Stroke="#FFFFFFFF" StrokeThickness="2.5"/>
+            <!-- 剩余时间徽标 -->
+            <TextBlock x:Name="BadgeText" Text="" FontSize="9" FontWeight="SemiBold"
+                       Foreground="#FFFFFFFF" Opacity="0.95"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,-1"/>
+        </Panel>
+    </Border>
+</Window>

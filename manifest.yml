@@ -1,0 +1,8 @@
+id: community.quicktimer
+name: 快速计时器
+description: 桌面置顶计时图标，按住图标拖动即可多级快速选时（短/中/长三档、档距非线性），松手开始计时，到点通过 ClassIsland 提醒发送通知。
+entranceAssembly: "QuickTimerPlugin.dll"
+url: https://github.com/ClassIsland/ClassIsland
+apiVersion: 2.1.0.0
+version: 1.0.0.0
+author: QuickTimer

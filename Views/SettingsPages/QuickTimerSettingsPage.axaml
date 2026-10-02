@@ -1,0 +1,58 @@
+<ci:SettingsPageBase x:Class="QuickTimerPlugin.Views.SettingsPages.QuickTimerSettingsPage"
+                     xmlns="https://github.com/avaloniaui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:ci="http://classisland.tech/schemas/xaml/core"
+                     mc:Ignorable="d">
+    <ScrollViewer>
+        <StackPanel Margin="16,12" Spacing="14" MaxWidth="640" HorizontalAlignment="Left">
+            <TextBlock Text="档位设置（分钟）" FontSize="16" FontWeight="SemiBold"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="短计时" VerticalAlignment="Center" Width="56"/>
+                <NumericUpDown x:Name="ShortMin" Width="90" Minimum="1" Maximum="600" Increment="1"/>
+                <TextBlock Text="至" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="ShortMax" Width="90" Minimum="1" Maximum="600" Increment="1"/>
+                <TextBlock Text="步长" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="ShortStep" Width="90" Minimum="1" Maximum="60" Increment="1"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="中计时" VerticalAlignment="Center" Width="56"/>
+                <NumericUpDown x:Name="MediumMin" Width="90" Minimum="1" Maximum="600" Increment="1"/>
+                <TextBlock Text="至" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="MediumMax" Width="90" Minimum="1" Maximum="600" Increment="1"/>
+                <TextBlock Text="步长" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="MediumStep" Width="90" Minimum="1" Maximum="60" Increment="1"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="长计时" VerticalAlignment="Center" Width="56"/>
+                <NumericUpDown x:Name="LongMin" Width="90" Minimum="1" Maximum="600" Increment="1"/>
+                <TextBlock Text="至" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="LongMax" Width="90" Minimum="1" Maximum="600" Increment="1"/>
+                <TextBlock Text="步长" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="LongStep" Width="90" Minimum="1" Maximum="60" Increment="1"/>
+            </StackPanel>
+
+            <TextBlock Text="交互与提醒" FontSize="16" FontWeight="SemiBold"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="拖动灵敏度（像素/档）" VerticalAlignment="Center"/>
+                <NumericUpDown x:Name="PixelsPerStep" Width="90" Minimum="4" Maximum="60" Increment="1"/>
+            </StackPanel>
+
+            <CheckBox x:Name="ShowRemainingBadge" Content="计时中在图标上显示剩余时间"/>
+            <CheckBox x:Name="NotifyOnFinish" Content="到点时发送 ClassIsland 提醒"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="12" Margin="0,8,0,0">
+                <Button Content="保存并应用" Click="OnSave"/>
+                <Button Content="重置图标位置" Click="OnResetPosition"/>
+            </StackPanel>
+
+            <TextBlock Text="提示：按住浮动图标左键拖动选时，左键单击暂停/继续，右键拖动移动图标，右键单击打开快捷菜单。"
+                       FontSize="12" Foreground="#99FFFFFF" TextWrapping="Wrap" MaxWidth="600"/>
+        </StackPanel>
+    </ScrollViewer>
+</ci:SettingsPageBase>
