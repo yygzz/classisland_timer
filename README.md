@@ -1,6 +1,7 @@
-# QuickTimerPlugin（快速计时器）
+# QuickTimerPlugin（快速计时器）BETA
+*有ai生成的内容
 
-ClassIsland（2.1+）插件：在桌面显示一个**置顶浮动计时图标**，类似内置点名器插件的使用方式，专为“快速设置一个倒计时”设计。
+ClassIsland插件：在桌面显示一个**置顶浮动计时图标**
 
 ## 功能
 
@@ -56,7 +57,3 @@ QuickTimerPlugin/
     └── SettingsPages/
         └── QuickTimerSettingsPage.*  # 设置页
 ```
-
-## 网络
-
-本仓库需通过 GitHub MCP/API 推送（部分网络环境直连 github.com 受限）。
